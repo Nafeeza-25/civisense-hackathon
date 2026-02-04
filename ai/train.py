@@ -30,11 +30,11 @@ class CivisenseModel:
         
         self.classifier = LogisticRegression(
             max_iter=1000,
-            multi_class='multinomial',
             solver='lbfgs',
             random_state=42,
             C=1.0
         )
+
         
         self.categories = None
         self.feature_names = None
