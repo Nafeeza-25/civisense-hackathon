@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Public Distribution System (Ration Card)",
+    "categories": ["welfare", "food_security"],
+    "keywords": ["ration", "food", "pds", "rice", "wheat", "card"],
+    "min_age": null,
+    "max_age": null,
+    "income_groups": ["bpl", "low"]
+  },
+  {
+    "name": "Old Age Pension Scheme",
+    "categories": ["welfare"],
+    "keywords": ["pension", "elderly", "senior", "old age"],
+    "min_age": 60,
+    "max_age": null,
+    "income_groups": ["bpl", "low"]
+  },
+  {
+    "name": "Ayushman Bharat (Health Insurance)",
+    "categories": ["health", "healthcare"],
+    "keywords": ["hospital", "treatment", "doctor", "medical"],
+    "min_age": null,
+    "max_age": null,
+    "income_groups": ["bpl", "low", "middle"]
+  },
+  {
+    "name": "PMAY (Housing Assistance)",
+    "categories": ["housing"],
+    "keywords": ["house", "roof", "home", "homeless"],
+    "min_age": null,
+    "max_age": null,
+    "income_groups": ["bpl", "low"]
+  }
+]

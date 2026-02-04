@@ -1,0 +1,151 @@
+complaint_text,category,urgency_score,population_impact,vulnerability_score
+No proper sanitation in government housing colony individual issue,Housing,0.6,0.2,0
+Dog menace in residential area affecting entire area,Other,0.6,0.9,0
+Load shedding without prior notice during exams local residents - particularly affecting slum dwellers,Electricity,0.6,0.5,0.7
+Ambulance service not responding to calls,Health,0.9,0.9,0
+Medical waste dumped in residential area 50+ households,Sanitation,0.9,0.9,0
+Ration card application pending for 5 months affecting one family - particularly affecting kids,Welfare,0.6,0.2,0.7
+Illegal encroachment on public housing land affecting multiple families,Housing,0.6,0.5,0
+Electricity meter showing wrong readings - particularly affecting children,Electricity,0.3,0.2,0.7
+Ration card application pending for 4 months - particularly affecting kids,Welfare,0.6,0.2,0.7
+Open defecation problem in Sardar Patel Street - particularly affecting pregnant women,Sanitation,0.9,0.2,0.9
+NREGA work not available in village complete ward - particularly affecting orphans,Welfare,0.6,0.9,0.8
+"Speed breaker damaged, need repair local residents",Roads,0.3,0.5,0
+Illegal water connection in MG Road local residents,Water,0.6,0.5,0
+Occupancy certificate not issued for 10 months affecting multiple families,Housing,0.3,0.5,0
+Ration card application pending for 6 months affecting one family,Welfare,0.6,0.2,0
+Sewage overflowing on main street several households,Sanitation,0.9,0.5,0
+Fire safety measures missing in old apartments - particularly affecting school children,Housing,0.9,0.2,0.7
+Load shedding without prior notice during exams all residents,Electricity,0.6,0.9,0
+Garbage not collected for 7 days in Lal Bahadur Area entire community - particularly affecting elderly people,Sanitation,0.9,0.9,0.8
+Medicines not available in government hospital single household - particularly affecting orphans,Health,0.9,0.2,0.8
+Road is completely damaged and needs resurfacing affecting multiple families - particularly affecting pregnant women,Roads,0.6,0.5,0.9
+Illegal water connection in Nehru Colony local residents,Water,0.6,0.5,0
+Pension payment delayed for 9 months,Welfare,0.9,0.2,0
+Pension payment delayed for 4 months multiple streets - particularly affecting old age people,Welfare,0.9,0.9,0.8
+Garbage dump near residential area causing health issues,Health,0.9,0.5,0
+Sewage overflowing on main street affecting multiple families,Sanitation,0.9,0.5,0
+Illegal encroachment on public housing land whole colony,Housing,0.6,0.9,0
+Water connection not provided to new house entire community - particularly affecting pregnant women,Water,0.3,0.9,0.9
+"Stray dogs increasing, need vaccination drive affecting multiple families - particularly affecting below poverty line",Health,0.6,0.5,0.8
+Housing subsidy application not processed affecting one family - particularly affecting kids,Housing,0.3,0.2,0.7
+High voltage fluctuation damaging appliances - particularly affecting orphans,Electricity,0.6,0.5,0.8
+Relief funds not distributed to flood victims,Welfare,0.9,0.2,0
+No electricity for 9 days in Subhash Circle,Electricity,0.9,0.5,0
+Large pothole on Main Road causing accidents,Roads,0.9,0.5,0
+Medicines not available in government hospital affecting one family,Health,0.9,0.2,0
+Scholarship amount not credited to students single household,Welfare,0.6,0.2,0
+Road is completely damaged and needs resurfacing affecting one family,Roads,0.6,0.2,0
+Electric pole is broken and hanging dangerously affecting multiple families,Electricity,0.9,0.5,0
+Illegal parking blocking narrow road affecting one family - particularly affecting widows,Roads,0.6,0.2,0.8
+Encroachment on public park by vendors,Other,0.3,0.5,0
+Housing subsidy application not processed several households,Housing,0.3,0.5,0
+Property tax assessment is incorrect,Other,0.3,0.9,0
+Street light transformer not working affecting one family - particularly affecting disabled persons,Electricity,0.6,0.2,0.9
+Low water pressure affecting 181 households,Water,0.6,0.9,0
+Government office website not working affecting entire area - particularly affecting elderly people,Other,0.3,0.9,0.8
+Road construction work abandoned for months affecting one family,Roads,0.3,0.2,0
+Ration card application pending for 6 months 100+ people,Welfare,0.6,0.9,0
+Garbage bins are overflowing attracting pests local residents,Sanitation,0.6,0.5,0
+Electricity meter showing wrong readings entire community,Electricity,0.3,0.9,0
+Scholarship amount not credited to students single household,Welfare,0.6,0.2,0
+Hospital equipment not working properly,Health,0.6,0.2,0
+Property tax assessment is incorrect individual issue,Other,0.3,0.2,0
+No water supply for 11 days in Ambedkar Nagar 100+ people,Water,0.9,0.9,0
+"Cracks in building walls, need structural inspection several households",Housing,0.9,0.5,0
+Government office website not working several households,Other,0.3,0.5,0
+Septic tank overflowing need immediate cleaning,Sanitation,0.9,0.5,0
+Large pothole on Fort Road causing accidents,Roads,0.9,0.5,0
+Illegal parking blocking narrow road multiple streets,Roads,0.6,0.9,0
+Illegal construction in residential zone local residents,Housing,0.6,0.5,0
+Noise pollution from construction at night,Other,0.6,0.5,0
+Water seepage problems in government quarters,Housing,0.6,0.2,0
+Public toilet is in very bad condition local residents - particularly affecting daily wage workers,Sanitation,0.6,0.5,0.7
+NREGA work not available in village entire community,Welfare,0.6,0.9,0
+Stray cattle rummaging through garbage - particularly affecting SC/ST community,Sanitation,0.6,0.9,0.7
+Water leakage in main pipeline near Government School affecting entire area,Water,0.6,0.9,0
+Drain is blocked causing waterlogging several households,Sanitation,0.6,0.5,0
+Illegal construction in residential zone 100+ people,Housing,0.6,0.9,0
+Large pothole on Main Road causing accidents several households,Roads,0.9,0.5,0
+Road construction work abandoned for months,Roads,0.3,0.5,0
+Illegal water connection in Azad Maidan 50+ households - particularly affecting children,Water,0.6,0.9,0.7
+Ration card application pending for 11 months,Welfare,0.6,0.9,0
+Primary health center has no doctor for 5 days local residents - particularly affecting elderly people,Health,0.9,0.5,0.8
+Street lights not working on Main Road for 5 days local residents - particularly affecting school children,Roads,0.6,0.5,0.7
+Water connection not provided to new house several households - particularly affecting below poverty line,Water,0.3,0.5,0.8
+Burst water pipe flooding the street individual issue - particularly affecting SC/ST community,Water,0.9,0.2,0.7
+Vaccination camp needed for children in Lal Bahadur Area several households,Health,0.6,0.5,0
+"Stray dogs increasing, need vaccination drive",Health,0.6,0.9,0
+Illegal parking blocking narrow road single household,Roads,0.6,0.2,0
+Stray cattle rummaging through garbage,Sanitation,0.6,0.5,0
+Government office website not working several households,Other,0.3,0.5,0
+Garbage not collected for 6 days in Lal Bahadur Area local residents,Sanitation,0.9,0.5,0
+New electricity connection delayed for months affecting multiple families - particularly affecting slum dwellers,Electricity,0.3,0.5,0.7
+Vaccination camp needed for children in Subhash Circle individual issue,Health,0.6,0.2,0
+Large pothole on Beach Road causing accidents,Roads,0.9,0.5,0
+Load shedding without prior notice during exams - particularly affecting below poverty line,Electricity,0.6,0.2,0.8
+Free bus pass for senior citizens not working several households,Welfare,0.3,0.5,0
+Mid-day meal quality very poor in schools local residents - particularly affecting elderly people,Welfare,0.6,0.5,0.8
+Garbage not collected for 4 days in Kamaraj Street individual issue - particularly affecting SC/ST community,Sanitation,0.9,0.2,0.7
+No proper sanitation in government housing colony,Housing,0.6,0.2,0
+Stray cattle rummaging through garbage single household - particularly affecting tribal area,Sanitation,0.6,0.2,0.7
+Illegal construction in residential zone local residents,Housing,0.6,0.5,0
+Septic tank overflowing need immediate cleaning individual issue - particularly affecting kids,Sanitation,0.9,0.2,0.7
+Footpath is broken near District Court several households,Roads,0.3,0.5,0
+Ambulance service not responding to calls,Health,0.9,0.9,0
+Garbage dump near residential area causing health issues,Health,0.9,0.9,0
+Electricity meter showing wrong readings,Electricity,0.3,0.5,0
+Broken water meter needs replacement at 51 Nehru Colony several households,Water,0.3,0.5,0
+Hospital equipment not working properly local residents - particularly affecting below poverty line,Health,0.6,0.5,0.8
+Hospital equipment not working properly affecting multiple families,Health,0.6,0.5,0
+No beds available in government hospital ICU - particularly affecting specially abled,Health,0.9,0.5,0.9
+Footpath is broken near Bus Stand multiple streets - particularly affecting specially abled,Roads,0.3,0.9,0.9
+Occupancy certificate not issued for 12 months single household,Housing,0.3,0.2,0
+Water tanker not coming for 4 days,Water,0.9,0.5,0
+No proper sanitation in government housing colony local residents,Housing,0.6,0.5,0
+Disability certificate application rejected unfairly - particularly affecting tribal area,Welfare,0.6,0.5,0.7
+Frequent power cuts affecting 70 households single household,Electricity,0.6,0.2,0
+Dirty water coming from taps in Lal Bahadur Area 50+ households,Water,0.9,0.9,0
+No beds available in government hospital ICU affecting multiple families - particularly affecting school children,Health,0.9,0.5,0.7
+Drain is blocked causing waterlogging,Sanitation,0.6,0.2,0
+Frequent power cuts affecting 50 households individual issue,Electricity,0.6,0.2,0
+Public library has very few books affecting multiple families,Other,0.3,0.5,0
+"Bore well has dried up, need alternative water source",Water,0.6,0.2,0
+Property tax assessment is incorrect local residents,Other,0.3,0.5,0
+Pension payment delayed for 7 months individual issue,Welfare,0.9,0.2,0
+Electricity bill is incorrect and too high single household,Electricity,0.3,0.2,0
+"Bore well has dried up, need alternative water source affecting multiple families - particularly affecting SC/ST community",Water,0.6,0.5,0.7
+Sewage overflowing on main street affecting one family,Sanitation,0.9,0.2,0
+Dirty water coming from taps in Naidu Layout 100+ people,Water,0.9,0.9,0
+Illegal hoarding blocking view at intersection,Other,0.3,0.2,0
+Drainage cover missing on main road - very dangerous,Roads,0.9,0.2,0
+Playground equipment is broken and dangerous individual issue,Other,0.6,0.2,0
+Septic tank overflowing need immediate cleaning several households,Sanitation,0.9,0.5,0
+Sewage overflowing on main street,Sanitation,0.9,0.5,0
+Property tax assessment is incorrect,Other,0.3,0.2,0
+Fire safety measures missing in old apartments affecting multiple families,Housing,0.9,0.5,0
+"Stray dogs increasing, need vaccination drive single household - particularly affecting tribal area",Health,0.6,0.2,0.7
+"Speed breaker damaged, need repair",Roads,0.3,0.5,0
+Community hall booking system not working local residents,Other,0.3,0.5,0
+Free bus pass for senior citizens not working affecting multiple families - particularly affecting slum dwellers,Welfare,0.3,0.5,0.7
+Birth certificate not issued for 10 months,Other,0.3,0.5,0
+Street lights not working on Hill Road for 10 days several households,Roads,0.6,0.5,0
+Illegal construction in residential zone,Housing,0.6,0.5,0
+Vaccination camp needed for children in Rajiv Chowk 50+ households - particularly affecting old age people,Health,0.6,0.9,0.8
+Dirty water coming from taps in Tilak Marg - particularly affecting elderly people,Water,0.9,0.5,0.8
+Electricity bill is incorrect and too high several households - particularly affecting kids,Electricity,0.3,0.5,0.7
+"Building in dangerous condition, may collapse affecting multiple families - particularly affecting orphans",Housing,0.9,0.5,0.8
+Public library has very few books,Other,0.3,0.9,0
+Property tax assessment is incorrect single household,Other,0.3,0.2,0
+Government office website not working whole colony,Other,0.3,0.9,0
+Sewage overflowing on main street 50+ households,Sanitation,0.9,0.9,0
+Medicines not available in government hospital,Health,0.9,0.5,0
+Electricity bill is incorrect and too high all residents - particularly affecting tribal area,Electricity,0.3,0.9,0.7
+Street light transformer not working several households,Electricity,0.6,0.5,0
+Ration card application pending for 3 months,Welfare,0.6,0.5,0
+Tree fallen on road blocking traffic several households,Roads,0.9,0.5,0
+Frequent power cuts affecting 31 households,Electricity,0.6,0.2,0
+Illegal construction in residential zone affecting multiple families,Housing,0.6,0.5,0
+Street light transformer not working single household - particularly affecting school children,Electricity,0.6,0.2,0.7
+Illegal water connection in Ambedkar Nagar several households,Water,0.6,0.5,0
+Water connection not provided to new house affecting multiple families,Water,0.3,0.5,0

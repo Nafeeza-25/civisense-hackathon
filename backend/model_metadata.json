@@ -1,0 +1,15 @@
+{
+  "trained_at": "2026-02-04T16:02:42.358032",
+  "categories": [
+    "Electricity",
+    "Health",
+    "Housing",
+    "Other",
+    "Roads",
+    "Sanitation",
+    "Water",
+    "Welfare"
+  ],
+  "num_features": 321,
+  "model_type": "TF-IDF + Logistic Regression"
+}
