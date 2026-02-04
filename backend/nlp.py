@@ -2,6 +2,11 @@
 Civisense NLP Engine
 Single-file hackathon version (NO cross-file imports)
 Exposes NLPEngine for FastAPI
+
+Features:
+- Uses ML model if model.joblib is present
+- Falls back to rule-based NLP if model is missing
+- Never crashes deployment environments (Render/Vercel/etc)
 """
 
 import re
@@ -11,7 +16,7 @@ from typing import Dict, Any, Tuple
 
 
 # =========================
-# INTERNAL AI ENGINE
+# INTERNAL AI ENGINE (ML MODE)
 # =========================
 
 class CivisenseNLP:
@@ -208,23 +213,75 @@ class CivisenseNLP:
 
 
 # =========================
-# FASTAPI INTERFACE
+# FASTAPI INTERFACE (SAFE MODE)
 # =========================
 
 class NLPEngine:
     def __init__(self, model_path: str = "model.joblib"):
-        if not os.path.exists(model_path):
-            raise FileNotFoundError(f"Model file not found: {model_path}")
+        self.engine = None
 
-        model_bundle = joblib.load(model_path)
-        self.engine = CivisenseNLP(model_bundle)
+        if os.path.exists(model_path):
+            try:
+                model_bundle = joblib.load(model_path)
+                self.engine = CivisenseNLP(model_bundle)
+                print("✅ ML model loaded successfully")
+            except Exception as e:
+                print("⚠️ Model load failed. Falling back to rule-based NLP:", e)
+        else:
+            print("⚠️ Model not found. Running in rule-based NLP mode")
 
     def predict_category(self, text: str) -> Tuple[str, float]:
-        result = self.engine.analyze_complaint(text)
-        return (
-            result["category"]["predicted"],
-            float(result["category"]["confidence"]),
-        )
+        # Use ML if available
+        if self.engine:
+            result = self.engine.analyze_complaint(text)
+            return (
+                result["category"]["predicted"],
+                float(result["category"]["confidence"]),
+            )
+
+        # -------------------------
+        # RULE-BASED FALLBACK
+        # -------------------------
+        t = text.lower()
+
+        if "water" in t or "pipe" in t or "tanker" in t:
+            return "Water", 0.6
+        if "road" in t or "pothole" in t or "street" in t:
+            return "Roads", 0.6
+        if "electric" in t or "power" in t or "light" in t:
+            return "Electricity", 0.6
+        if "hospital" in t or "medicine" in t or "ambulance" in t:
+            return "Health", 0.6
+        if "ration" in t or "pension" in t or "scholarship" in t:
+            return "Welfare", 0.6
+        if "garbage" in t or "sewage" in t or "sanitation" in t:
+            return "Sanitation", 0.6
+        if "house" in t or "housing" in t or "construction" in t:
+            return "Housing", 0.6
+
+        return "Other", 0.5
 
     def analyze_full(self, text: str) -> Dict[str, Any]:
-        return self.engine.analyze_complaint(text)
+        if self.engine:
+            return self.engine.analyze_complaint(text)
+
+        # Minimal explainable fallback output
+        category, confidence = self.predict_category(text)
+        return {
+            "category": {
+                "predicted": category,
+                "confidence": confidence,
+            },
+            "scores": {
+                "urgency": 0.3,
+                "population_impact": 0.3,
+                "vulnerability": 0.0,
+                "priority": 0.3,
+                "priority_level": "LOW",
+            },
+            "explanations": {
+                "urgency": ["Rule-based fallback"],
+                "population": ["Rule-based fallback"],
+                "vulnerability": ["Rule-based fallback"],
+            },
+        }
