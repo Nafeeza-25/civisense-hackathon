@@ -35,8 +35,7 @@ Open App:
 http://localhost:8080
 
 
-**Team Notes
-**
+**Team Notes**
 Don’t push directly to main
 Create your own branch:
 
