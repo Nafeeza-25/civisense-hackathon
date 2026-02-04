@@ -1,0 +1,270 @@
+[
+  {
+    "scheme_id": "SCH-001",
+    "name": "Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+    "description": "Health assurance scheme providing cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization.",
+    "ministry": "Ministry of Health and Family Welfare",
+    "eligibility_rules": {
+      "target_group": ["SECC_2011_Deprived", "Occupational_Category_Urban"],
+      "exclusions": ["Govt_Employee", "Income_Tax_Payer", "Owns_Motorized_Vehicle", "Kisan_Credit_Card_Limit_>_50k"]
+    },
+    "age_limits": {
+      "min": 0,
+      "max": null,
+      "note": "No age limit for family members; specific benefits for seniors 70+"
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "SECC_Deprivation_Criteria",
+      "note": "Based on deprivation status, not direct income cap, though broadly BPL oriented."
+    },
+    "keywords": ["health insurance", "hospitalization", "5 lakh", "ayushman bharat", "surgery", "medical"],
+    "common_grievances": [
+      "Hospital denying cashless treatment",
+      "Beneficiary name mismatch in SECC database",
+      "Golden Card generation failure due to biometric issues",
+      "Unjustified package blocking"
+    ]
+  },
+  {
+    "scheme_id": "SCH-002",
+    "name": "PM Kisan Samman Nidhi",
+    "description": "Income support of Rs. 6,000 per year in three equal installments to all land-holding farmer families.",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "eligibility_rules": {
+      "target_group": ["Landholding_Farmer"],
+      "exclusions": ["Institutional_Landholder", "Const_Post_Holder", "Retired_Pensioner_>_10k", "Income_Tax_Payer", "Professionals_Dr_Eng_Lawyer"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": null,
+      "note": "Must be an adult with land records in their name."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "Exclusion_Based",
+      "note": "Tax payers are excluded."
+    },
+    "keywords": ["farmer", "agriculture", "6000", "income support", "kisan", "land owner"],
+    "common_grievances": [
+      "Installment (FTO) generation failure",
+      "Land record mismatch with portal",
+      "eKYC authentication failure",
+      "Aadhaar not seeded with bank account"
+    ]
+  },
+  {
+    "scheme_id": "SCH-003",
+    "name": "Pradhan Mantri Awas Yojana (Urban)",
+    "description": "Provides central assistance to urban poor for construction/enhancement of houses.",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "eligibility_rules": {
+      "target_group": ["Urban_Resident", "No_Pucca_House"],
+      "exclusions": ["Owns_Pucca_House_Anywhere_in_India", "Availed_Central_Housing_Scheme_Earlier"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": 70,
+      "note": "Loan tenure extends up to 70 years of age."
+    },
+    "income_limits": {
+      "EWS": "Up to 3 Lakh/year",
+      "LIG": "3 Lakh to 6 Lakh/year",
+      "MIG": "6 Lakh to 18 Lakh/year"
+    },
+    "keywords": ["housing", "home loan subsidy", "CLSS", "pucca house", "urban poor", "flat construction"],
+    "common_grievances": [
+      "Delay in subsidy credit",
+      "Rejection due to geotagging errors",
+      "Dispute over beneficiary list inclusion",
+      "CLSS ID generation delay"
+    ]
+  },
+  {
+    "scheme_id": "SCH-004",
+    "name": "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
+    "description": "Guarantees 100 days of wage employment in a financial year to a rural household whose adult members volunteer to do unskilled manual work.",
+    "ministry": "Ministry of Rural Development",
+    "eligibility_rules": {
+      "target_group": ["Rural_Household"],
+      "exclusions": ["Urban_Residents"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": null,
+      "note": "Any adult member of the household."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "N/A",
+      "note": "Universal for rural households willing to do manual labor."
+    },
+    "keywords": ["employment", "100 days work", "job card", "unskilled labor", "rural work", "nrega"],
+    "common_grievances": [
+      "Delay in wage payment",
+      "Non-issuance of Job Card",
+      "Work not provided within 15 days",
+      "Measurement of work disputes"
+    ]
+  },
+  {
+    "scheme_id": "SCH-005",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "description": "Provides clean cooking fuel (LPG) to women from poor households.",
+    "ministry": "Ministry of Petroleum and Natural Gas",
+    "eligibility_rules": {
+      "target_group": ["Adult_Woman", "SC_ST_Household", "PMAY_Beneficiary", "AAY_Beneficiary"],
+      "exclusions": ["Household_With_Existing_LPG_Connection"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": null,
+      "note": "Applicant must be an adult woman."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "Poor_Household",
+      "note": "Based on 14-point declaration of poverty or specific category (SC/ST/Forest Dweller)."
+    },
+    "keywords": ["gas cylinder", "LPG", "cooking fuel", "women", "smoke free", "stove"],
+    "common_grievances": [
+      "Distributor demanding extra money",
+      "Delay in installation",
+      "Rejection of KYC due to address mismatch",
+      "Forced purchase of stove/hotplate"
+    ]
+  },
+  {
+    "scheme_id": "SCH-006",
+    "name": "Atal Pension Yojana (APY)",
+    "description": "A pension scheme for citizens of India focused on the unorganized sector workers.",
+    "ministry": "Ministry of Finance",
+    "eligibility_rules": {
+      "target_group": ["Indian_Citizen", "Bank_Account_Holder"],
+      "exclusions": ["Income_Tax_Payer (Since Oct 1, 2022)"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": 40,
+      "note": "Entry age strictly 18-40."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "Non-Taxpayer",
+      "note": "Must not be a tax payer."
+    },
+    "keywords": ["pension", "old age security", "monthly contribution", "retirement", "guaranteed pension"],
+    "common_grievances": [
+      "Unauthorized auto-debit from bank account",
+      "Difficulty in exiting scheme prematurely",
+      "PRAN card non-receipt",
+      "Downgrading pension amount issues"
+    ]
+  },
+  {
+    "scheme_id": "SCH-007",
+    "name": "National Social Assistance Programme (IGNOAPS - Old Age Pension)",
+    "description": "Non-contributory pension for elderly living below the poverty line.",
+    "ministry": "Ministry of Rural Development",
+    "eligibility_rules": {
+      "target_group": ["BPL_Household"],
+      "exclusions": ["APL_Household"]
+    },
+    "age_limits": {
+      "min": 60,
+      "max": null,
+      "note": "60-79 years get Rs. 200, 80+ get Rs. 500 (Central share)."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "BPL",
+      "note": "Must appear in BPL list."
+    },
+    "keywords": ["old age pension", "senior citizen", "BPL pension", "widow pension", "social security"],
+    "common_grievances": [
+      "Pension stopped without notice",
+      "Declared dead in records while alive",
+      "Bribery demands by local officials",
+      "Delay in monthly disbursement"
+    ]
+  },
+  {
+    "scheme_id": "SCH-008",
+    "name": "PM SVANidhi",
+    "description": "Micro-credit facility for street vendors to restart their businesses post-COVID.",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "eligibility_rules": {
+      "target_group": ["Street_Vendor"],
+      "exclusions": ["N/A"]
+    },
+    "age_limits": {
+      "min": 18,
+      "max": null,
+      "note": "Standard legal age for contracting."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "Vending_Activity",
+      "note": "Must be engaged in vending in urban areas before March 24, 2020."
+    },
+    "keywords": ["street vendor", "loan", "10000", "working capital", "hawker", "thela"],
+    "common_grievances": [
+      "Loan rejection by banks despite sanction",
+      "Low CIBIL score rejection (against rules)",
+      "Delay in interest subsidy credit",
+      "Harassment for repayment"
+    ]
+  },
+  {
+    "scheme_id": "SCH-009",
+    "name": "Sukanya Samriddhi Yojana (SSY)",
+    "description": "Small savings scheme for the girl child to encourage education and marriage savings.",
+    "ministry": "Ministry of Finance",
+    "eligibility_rules": {
+      "target_group": ["Girl_Child"],
+      "exclusions": ["More_than_2_daughters (except twins/triplets)"]
+    },
+    "age_limits": {
+      "min": 0,
+      "max": 10,
+      "note": "Account must be opened before girl turns 10."
+    },
+    "income_limits": {
+      "amount": null,
+      "type": "Investment_Cap",
+      "note": "Min deposit Rs. 250, Max Rs. 1.5 Lakh/year."
+    },
+    "keywords": ["girl child", "education savings", "marriage savings", "tax free", "high interest"],
+    "common_grievances": [
+      "Refusal by post office/bank to open account",
+      "Transfer of account between branches",
+      "Maturity claim documentation issues"
+    ]
+  },
+  {
+    "scheme_id": "SCH-010",
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "description": "Maternity benefit program providing cash incentive for the first live birth.",
+    "ministry": "Ministry of Women and Child Development",
+    "eligibility_rules": {
+      "target_group": ["Pregnant_Woman", "Lactating_Mother"],
+      "exclusions": ["Govt_PSU_Employee", "Not_First_Child (except for 2nd girl child in PMMVY 2.0)"]
+    },
+    "age_limits": {
+      "min": 19,
+      "max": null,
+      "note": "Age of mother should be minimum 19 years."
+    },
+    "income_limits": {
+      "amount": "8 Lakh",
+      "type": "Family_Income",
+      "note": "Or holding MGNREGA card/Kisan Samman Nidhi beneficiary etc."
+    },
+    "keywords": ["maternity", "pregnant", "pregnancy aid", "5000", "mother", "first child"],
+    "common_grievances": [
+      "Delay in installment payment",
+      "Husband's Aadhaar requirement issues (now relaxed)",
+      "Data entry errors by Anganwadi worker"
+    ]
+  }
+]
