@@ -2,31 +2,65 @@ import json
 import os
 from typing import Tuple, Dict, List
 
-# ==========================
+# ============================
 # SAFE SCHEME LOADER
-# ==========================
+# ============================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SCHEME_PATH = os.path.join(BASE_DIR, "schemes.json")
+DEFAULT_SCHEMES = [
+    {
+        "name": "Public Water Supply Department",
+        "categories": ["water", "sanitation"],
+        "keywords": ["water", "no supply", "pipeline", "drinking water", "leakage"],
+        "income_groups": []
+    },
+    {
+        "name": "Municipal Roads & Transport",
+        "categories": ["roads", "transport", "infrastructure"],
+        "keywords": ["road", "pothole", "street light", "traffic", "bridge"],
+        "income_groups": []
+    },
+    {
+        "name": "Health & Family Welfare Scheme",
+        "categories": ["health", "hospital", "medical"],
+        "keywords": ["hospital", "doctor", "ambulance", "medicine", "health"],
+        "income_groups": []
+    },
+    {
+        "name": "Social Welfare Board",
+        "categories": ["welfare", "pension", "housing"],
+        "keywords": ["pension", "housing", "widow", "elderly", "disability", "scheme"],
+        "income_groups": ["bpl", "low"]
+    }
+]
 
+SCHEMES: List[Dict] = []
+
+# Try loading from file, fallback if missing
 try:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    SCHEME_PATH = os.path.join(BASE_DIR, "schemes.json")
+
     with open(SCHEME_PATH, "r", encoding="utf-8") as f:
-        SCHEMES: List[Dict] = json.load(f)
-    print(f"[SCHEMES] Loaded {len(SCHEMES)} welfare schemes")
+        SCHEMES = json.load(f)
+
+    print("✅ Loaded schemes.json")
+
 except Exception as e:
-    print(f"[SCHEMES] Failed to load schemes.json: {e}")
-    SCHEMES = []
+    print("⚠️ schemes.json not found, using DEFAULT schemes")
+    SCHEMES = DEFAULT_SCHEMES
 
 
-# ==========================
-# ELIGIBILITY ENGINE
-# ==========================
+# ============================
+# INTERNAL HELPERS
+# ============================
 
 def _is_eligible(scheme: Dict, metadata: Dict) -> bool:
     """
     Check eligibility rules against user metadata
-    metadata can include: age, income_group, occupancy, etc.
+    metadata can include: age, income_group, etc.
     """
+    if not metadata:
+        return True
 
     # Age check
     if scheme.get("min_age") is not None:
@@ -50,13 +84,13 @@ def _keyword_score(text: str, keywords: List[str]) -> int:
     """
     Score how many scheme keywords appear in complaint text
     """
-    t = (text or "").lower()
+    t = text.lower()
     return sum(1 for k in keywords if k.lower() in t)
 
 
-# ==========================
-# MAIN SCHEME MAPPER
-# ==========================
+# ============================
+# MAIN ENGINE
+# ============================
 
 def map_scheme(
     category: str,
@@ -68,14 +102,6 @@ def map_scheme(
     Map a complaint to the best-fit welfare scheme
     Returns: (scheme_name, explanation)
     """
-
-    # HARD FAILSAFE — NEVER CRASH API
-    if not SCHEMES:
-        return (
-            "General Grievance Redressal Cell",
-            "Scheme engine running in fallback mode (no scheme database loaded on server)."
-        )
-
     metadata = metadata or {}
     category = (category or "").lower()
     text = (text or "").lower()
@@ -98,7 +124,6 @@ def map_scheme(
         if score > 0:
             candidates.append((score, scheme))
 
-    # Fallback if nothing matches
     if not candidates:
         return (
             "General Grievance Redressal Cell",
@@ -114,10 +139,10 @@ def map_scheme(
         if k.lower() in text
     ]
 
-    explanation = f"Matched scheme '{best.get('name', 'Unknown')}' using keywords: "
-    explanation += ", ".join(matched_keywords[:5]) or "category relevance"
+    explanation = f"Matched scheme '{best['name']}' based on keywords: "
+    explanation += ", ".join(matched_keywords[:5])
 
     if area:
-        explanation += f". Assigned to local office for area '{area}'."
+        explanation += f". Prioritized for local office in area '{area}'."
 
-    return best.get("name", "General Grievance Redressal Cell"), explanation
+    return best["name"], explanation
