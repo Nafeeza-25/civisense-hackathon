@@ -23,6 +23,18 @@ app = FastAPI(
     version="0.1.0",
 )
 
+# ----------------------------
+# ROOT HOMEPAGE (IMPORTANT)
+# ----------------------------
+@app.get("/")
+def root():
+    return {
+        "service": "Civisense Civic Intelligence API",
+        "status": "running",
+        "docs": "/docs",
+        "message": "Welcome to Civisense. Open /docs to test complaint intake, AI classification, priority scoring, and welfare scheme mapping."
+    }
+
 # Allow browser tools / frontends to call this API from anywhere by default.
 app.add_middleware(
     CORSMiddleware,
@@ -163,18 +175,14 @@ def create_complaint(payload: ComplaintIn, db: Session = Depends(get_db)) -> Com
 
 @app.get("/dashboard", response_model=DashboardMetric)
 def get_dashboard(db: Session = Depends(get_db)) -> DashboardMetric:
-    # Basic aggregate metrics for a simple dashboard.
     total = db.query(Complaint).count()
 
-    # By status
     by_status_rows = db.query(Complaint.status, func.count(Complaint.id)).group_by(Complaint.status).all()
     by_status = {status or "unknown": count for status, count in by_status_rows}
 
-    # By category
     by_category_rows = db.query(Complaint.category, func.count(Complaint.id)).group_by(Complaint.category).all()
     by_category = {category or "uncategorized": count for category, count in by_category_rows}
 
-    # Top areas by complaint count
     area_rows = (
         db.query(Complaint.area, func.count(Complaint.id).label("count"))
         .group_by(Complaint.area)
@@ -182,18 +190,16 @@ def get_dashboard(db: Session = Depends(get_db)) -> DashboardMetric:
         .limit(5)
         .all()
     )
-    top_areas = [
-        {"area": area or "unknown", "count": count}
-        for area, count in area_rows
-    ]
 
-    # Recent high-priority complaints
+    top_areas = [{"area": area or "unknown", "count": count} for area, count in area_rows]
+
     recent_high_priority = (
         db.query(Complaint)
         .order_by(Complaint.priority_score.desc(), Complaint.timestamp.desc())
         .limit(10)
         .all()
     )
+
     recent_data = [
         {
             "id": c.id,
@@ -231,7 +237,6 @@ def update_status(
     db.commit()
     db.refresh(complaint)
 
-    # Reconstruct explanation in a minimal way
     explanation = {
         "priority_score": {
             "value": complaint.priority_score or 0.0,
@@ -270,14 +275,12 @@ def create_feedback(payload: FeedbackIn, db: Session = Depends(get_db)) -> dict:
     )
     db.add(feedback)
 
-    # Optionally update complaint with corrections
     if payload.correct_category:
         complaint.category = payload.correct_category
     if payload.correct_scheme:
         complaint.scheme = payload.correct_scheme
 
     db.commit()
-
     return {"message": "Feedback recorded successfully"}
 
 
@@ -286,4 +289,3 @@ if __name__ == "__main__":
 
     port = int(os.getenv("PORT", "8000"))
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
-
